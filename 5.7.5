@@ -1,0 +1,50 @@
+public class BoxStringCorners
+{
+   /**
+      Prints a string in a box with corners.
+      @param contents the string to enclose in a box
+   */
+   public static void boxString(String contents)
+   {
+      int n = contents.length();
+
+// loop run two spaces more than content
+		for (int i = 0; i < n + 2; i++) {
+			// inserting + at start
+			if (i == 0) {
+				System.out.print("+");
+			}
+			// inserting + at end
+			else if (i == n + 1) {
+				System.out.print("+");
+			}
+			// inserting - in the middle
+			else {
+				System.out.print("-");
+			}
+		}
+		// line change
+		System.out.println();
+		// prints the content
+		System.out.println("!" + contents + "!");
+
+		// doing same steps as in the above loop
+		for (int i = 0; i < n + 2; i++) {
+			// checking value of i
+			if (i == 0) {
+				System.out.print("+");
+			} else if (i == n + 1) {
+				System.out.print("+");
+			} else {
+				System.out.print("-");
+			}
+		}
+		System.out.println();
+
+   }
+
+   public static void main(String[] args)
+   {
+      boxString("Hello World");
+   }
+}
