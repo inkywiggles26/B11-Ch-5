@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class BoxStringWithHelper
+{
+   /**
+    * Prints a line of hyphens followed by a newline.
+    * @param count the number of - characters to print.
+    */
+
+public static void printLine(int n){
+        int i = 0;
+        while(i < n){ // while loop run run till n - 1
+            System.out.print("-"); // display a character '-'
+            i = i + 1; // Increment i by 1
+        }
+        System.out.println();
+    }
+    // method definition boxString
+    public static void boxString(String contents){
+        int n = contents.length(); // get length of string contents
+        printLine(n+4); // call method printLine
+        System.out.println("! " + contents + " !"); // display string call
+        printLine(n+4); // call method printLine
+   }
+
+   public static void main(String[] args)
+   {
+      Scanner in = new Scanner(System.in);
+      String message = in.nextLine();
+      boxString(message);
+   }
+}
