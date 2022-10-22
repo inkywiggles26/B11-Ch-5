@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class HelperMethods
+{
+   public static void printPageNumber(int page)
+   {
+      if (isEven(page)) { System.out.println(page); }
+      else { System.out.println("...................." + page); }
+   }
+
+   public static boolean isEven(int page)
+{
+if(page%2==0) return true;
+else return false;
+}/* Your code goes here */
+
+   public static void main(String[] args)
+   {
+      Scanner in = new Scanner(System.in);
+      int page = in.nextInt();
+      printPageNumber(page);
+   }
+}
