@@ -1,0 +1,12 @@
+public class Boxes
+{
+   public static void printBoxes(int n)
+   {      
+      if (n<=0) 
+      { 
+         return; 
+      }
+      System.out.print("[]");
+      printBoxes(--n);
+   }
+}
